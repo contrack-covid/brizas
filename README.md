@@ -27,7 +27,22 @@
 O Brizas bot é um bot com a base do [MhankBars](https://github.com/MhankBarBar/termux-wabot) com api principal do wpp web feita pelo [adiwajshing](https://github.com/adiwajshing/Baileys) e sua equipe. O bot foi modificado e adicionado diversos comandos que foram desenvolvido principalmente para satisfazer o povo brasileiro, com gerador de cidadão, CPF, e CC, e muito mais. Se inscreva no meu canal do [Youtube](https://www.youtube.com/channel/UCK_e0brrGXeXk-zg2NFbJTg) para saber mais sobre o Brizas Orion e de como instalá-lo
 
 ---
+# 🔄 Atualizar automaticamente
+```
+cd Brizas-bot
+sh update.sh
+```
+---
+# 🌐 Logando e deslogando do wpp web
+```
+cd Brizas-bot
+node reset.js
 
+(para logar de novo)
+node index.js
+```
+
+---
 
 # ⬇️ Instalação
 
