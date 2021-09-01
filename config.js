@@ -1,8 +1,10 @@
-const ownerNumber = ["557187645787@s.whatsapp.net"] 
+const ownerNumber = ["558291099267@s.whatsapp.net"] 
 // mude somente o numero e não tire o @s.whatsapp.net
 
-const OriginalOwner = '557187645787' 
+const OriginalOwner = '558291099267' 
 // mude para seu numero
+
+const callbotmsgs = ['orion', 'brizas']
 
 var gimagenotregister = false
 // quando não há comando registrado o bot procura no google image
@@ -18,6 +20,8 @@ const urlaudiomenu = 'https://b.top4top.io/m_19923zx481.mp3'
 
 const antipvmsg = '*🚫 PV BLOQUEADO 🚫*'
 //mensagem do antipv
+
+const limitqnt = 9999
 
 const delayantispamcmd = 3
 //tempo de delay do antispamcmd (medido por segundos)
@@ -35,7 +39,7 @@ const byemsgimg = (numero, groupname) => {
 //Obs: não coloque o texto longo para a imagem não sumir
 
 const menumsgimg = (numero, groupname, battery) => {
-    return `MENU DO BRIZAS-BOT COM 434 COMANDOS, BATERIA: ${battery}`
+    return `MENU DO @FIGURINHAS_WHATSAPP-BOT COM 434 COMANDOS, BATERIA: ${battery}`
 }
 //Texto no menu da imagem quando welcome esta ativado
 //Obs: não coloque o texto longo para a imagem não sumir
@@ -59,22 +63,33 @@ const backgroundbyeimg = `https://i.imgur.com/2TCj9ri.jpg`
 const apikeyimgbb = 'c9cf132756510ad171587fb5a5a0389f'
 // sua key do imgbb para ativar o antiporn e mais alguns comando que necessita de baixar imagem
 
-const cr = '☄️✨𝑩𝑹⃟𝑰𝒁𝑨𝑺 𝑶⃟𝑹𝑰𝑶𝑵✨☄️\n' 
+const cr = '@figurinhas_whatsapp\n' 
 // texto do simbolo de verificado
 
-const prefix = '!' 
+const prefix = '/' 
 // prefixo
 
 const blockedmsg = '*😜 Seu número esta bloqueado, ou seja não ouvindo você 😜*'
 // mensagem quando alguem bloqueado solicita um comando
 
-const blockedcmdmsg = '*🚫Este comando esta bloqueado contate o propitetário do bot para saber o pq🚫*'
+const blockedcmdmsg = '*🚫Este comando esta bloqueado contate o propietário do bot para saber o pq🚫*'
 // mensagem quando alguem solicita um comando bloqueado 
 
 // MENSAGENS DE BAN
 
 const banmsgtype = '*Corra membro comum, o ban estar próximo*'
 // mensagem de ban no anti tipos de mensagem
+
+const ativohelp = `O sistema de contagem de mensagens é por grupo e consiste em rankear, listar, remover pessoas de acordo
+com a frequência de mensagens no grupo, veja abaixo os comandos para administrar as mensagens do grupo:
+
+checkativo (marcar) - lista a frequência de mensagens do membro marcado
+rankativo - rankea as pessoas mais ativas do grupo
+banativos (num) - remove membros com uma certa qnt de numeros de msg pra baixo
+filtroativo (num) - lista membros com uma certa qnt de numeros de msg pra baixo]
+atividade - lista a atividade de todos membros do grupo
+
+Obs: O número de mensagens pode estar impreciso devido a contagem ser pelo bot.`
 
 const adminmsgtype = '*Tu é adm ent n vou te banir por mandar um tipo de mensagem proibida*'
 // mensagem de quando adm manda tipos de mensagens proibidas
@@ -167,8 +182,57 @@ const vcard = 'BEGIN:VCARD\n'
 //vcard do propietário, mude os numeros de acordo com o formato que
 //ele corresponde
 
+const gpvotohelp = `O sistema de voto gp consiste no sistema normal de voto, porém feito somente para grupos
+veja abaixo os comandos e suas funções a seguir:
+
+${prefix}gpinitvoto
+${prefix}gpvotoinit - Inicia a votação em grupo
+Ex: ${prefix}gpvotoinit tema | opção 1 | opção 2
+Obs: pode acrescentar quantas opções quiser
+
+${prefix}gpclearvoto
+${prefix}gpvotoclear - Limpa todos os votos
+
+${prefix}gpvotostatus
+${prefix}gpstatusvoto - Vê o status atual do voto
+
+${prefix}gpvoto - Vota em uma opção
+Ex: ${prefix}gpvoto opção1
+
+${prefix}gpvotofinish
+${prefix}gpfinishvoto - Encerra a votação
+
+${prefix}gpbroadvoto
+${prefix}gpvotobroad - Faz uma transmissão da votação para todos membros do grupo`
+
+const votohelp = `O sistema de voto consistem em todos os usuários do bot poderem votar e para ter uma boa
+experiência, há comandos para administrar essa votação. Veja abaixo os comandos e suas funções a seguir:
+
+${prefix}initvoto
+${prefix}votoinit - Inicia a votação geral
+Ex: ${prefix}votoinit tema | opção 1 | opção 2
+Obs: pode acrescentar quantas opções quiser
+
+${prefix}clearvoto
+${prefix}votoclear - Limpa todos os votos
+
+${prefix}votostatus
+${prefix}statusvoto - Vê o status atual do voto
+
+${prefix}voto - Vota em uma opção
+Ex: ${prefix}voto opção1
+
+${prefix}votofinish
+${prefix}finishvoto - Encerra a votação
+
+${prefix}broadvoto
+${prefix}votobroad - Faz uma transmissão da votação para todos que usam o bot`
 
 // Nem ouse mexer aqui se n quiser que de erro
+exports.gpvotohelp = gpvotohelp
+exports.votohelp = votohelp
+exports.ativohelp = ativohelp
+exports.limitqnt = limitqnt
 exports.urlaudiomenu = urlaudiomenu
 exports.delayantispamcmd = delayantispamcmd
 exports.antinewchatmsg = antinewchatmsg
@@ -221,3 +285,4 @@ exports.cr = cr
 exports.vcard = vcard
 exports.OriginalOwner = OriginalOwner
 exports.ownerNumber = ownerNumber
+exports.callbotmsgs = callbotmsgs
